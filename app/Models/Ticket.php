@@ -14,4 +14,14 @@ class Ticket extends Model
         'status'
     ];
     use HasFactory;
+    
+    public function category() 
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function label()
+    {
+        return $this->belongsTo(Label::class);
+    }
 }
